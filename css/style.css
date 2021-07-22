@@ -1,0 +1,309 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+:root {
+  --mainBlack: #000000;
+  --mainLightBlue: rgb(63, 218, 245);
+  --mainWhite: #fff;
+  --greenTrans: rgba(0, 255, 162, 0.25);
+  --blueTrans: rgba(63, 218, 245, 0.25);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Pixel Emulator";
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+}
+/* nav links */
+.navbar-toggler {
+  outline: none !important;
+}
+.toggler-icon {
+  font-size: 2.5rem;
+  color: var(--mainBlack);
+}
+.nav-link {
+  color: var(--mainBlack);
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav-link:hover {
+  color: var(--mainGrey);
+}
+/* end of nav links */
+/* info icons */
+.cart-info__icon {
+  color: var(--mainGrey);
+  cursor: pointer;
+}
+
+.cart-info {
+  border: 0.1rem solid var(--mainBlack);
+  color: var(--mainBlack);
+  border-radius: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.cart-info:hover {
+  background: var(--mainBlack);
+  border-color: var(--mainBlack);
+  color: var(--mainWhite);
+}
+.cart-info:hover .cart-info__icon {
+  color: var(--mainBlack);
+}
+/* end of info icons */
+/* banner */
+
+.max-height  {
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(var(--greenTrans), var(--greenTrans)),
+    url("../img-cart/headerBcg.png") center/cover fixed no-repeat;
+  position: relative; 
+}
+.max-height2{
+  min-height: calc(100vh - 76px);
+  background: linear-gradient(var(--blueTrans), var(--blueTrans)),
+    url("../img/store.jpg") center/cover fixed no-repeat !important;
+  position: relative !important;
+}
+.max-height3{
+  min-height: calc(100vh - 0px);
+  background:
+    url("../img/logo.png") center/cover fixed no-repeat !important;
+  position: relative !important;
+}
+.max-height4{
+  min-height: calc(10vh - 76px);
+  background: linear-gradient(var(--blueTrans), var(--blueTrans)),
+    url("../img/xboxtheme.jpg") center/cover fixed no-repeat !important;
+  position: relative !important;
+}
+.banner {
+  color: var(--mainBlack);
+  margin-top: -4rem;
+}
+.banner-title {
+  color: var(--mainBlack);
+  font-size: 4rem;
+}
+.banner-link {
+  font-size: 1.5rem;
+  color: var(--mainBlack);
+  border: 0.2rem solid var(--mainBlack);
+}
+.banner-link:hover {
+  background: var(--mainBlack);
+  color: var(--mainWhite);
+}
+/* endo of banner */
+/* cart  */
+.cart {
+  position: absolute;
+  min-height: 10rem;
+  max-height: 30rem;
+  background: var(--mainBlack);
+  top: 55px;
+  right: 500px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(131, 131, 131, 0.685);
+  width: 0;
+  overflow: hidden;
+}
+.show-cart {
+  width: 40rem;
+  padding: 4rem 1.5rem;
+  transform: rotateY(-360deg);
+}
+.cart-item {
+  transition: all 2s ease-in-out;
+}
+
+/* end of cart */
+/* cart item */
+.cart-item-remove {
+  color: var(--mainBlack);
+  transition: all 1s ease-in-out;
+}
+.cart-item-remove:hover {
+  transform: scale(1.1);
+  color: var(--mainBlack);
+}
+#cart-item-price {
+  font-size: 0.8rem;
+}
+/* cart item */
+/* cart buttons */
+.btn-pink {
+  color: var(--mainBlack) !important;
+  border-color: var(--mainBlack) !important;
+}
+.btn-black {
+  color: var(--mainWhite) !important;
+  border-color: var(--mainBlack) !important;
+}
+.btn-black:hover {
+  color: var(--mainGrey) !important;
+  background: var(--mainBlack) !important;
+}
+.btn-pink:hover {
+  background: var(--mainGrey) !important;
+  color: var(--mainBlack) !important;
+}
+/* end of cart buttons */
+
+/* about */
+.about-img__container {
+  position: relative;
+  z-index: +1;
+}
+
+.about-img__container::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainBlack);
+  z-index: -1;
+  transition: all 2s ease-in-out;
+  background-color: black;
+}
+
+.about-img__container:hover:before  {
+  top: 0;
+  left: 0;
+  transform: rotate(1080deg);
+  transition:all 2s ease-in-out;
+  background-color: lightgreen;
+}
+
+.about-img__containers {
+  position: relative;
+}
+
+.about-img__containers::before {
+  content: "";
+  position: absolute;
+  top: -5.5rem;
+  left: -10.7rem;
+  width: 100%;
+  height: 100%;
+  outline: 0.5rem solid var(--mainBlack);
+  z-index: -1;
+  transition: all 1s ease-in-out;
+}
+
+.about-img__containers:hover:before {
+  top: 0;
+  left: 0;
+}
+
+
+/*end of  about */
+
+/* store items */
+.store {
+  background: var(--mainWhite);
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.store-img {
+  transition: all 1s ease-in-out;
+}
+.img-container:hover .store-img {
+  transform: scale(1.2);
+}
+.store-item-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0.75rem;
+  background: var(--mainLightBlue);
+  border-top-left-radius: 1rem;
+  transition: all 1s ease-in-out;
+  transform: translate(100%, 100%);
+}
+
+#store-item-name{
+  font-size:calc(10px + .8vw);
+}
+.img-container:hover .store-item-icon {
+  transform: translate(0, 0);
+}
+.store-item-icon:hover {
+  color: var(--mainBlack);
+}
+.store-item-value {
+  color: --mainLightBlue;
+  font-size:calc(10px + .8vw);
+}
+/*end of  store items */
+.search-box {
+  background: var(--mainBlack);
+  color: var(--mainBlack);
+}
+
+/* ligthbox */
+
+.lightbox-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.lightbox-holder {
+  position: relative;
+}
+.lightbox-item {
+  min-height: 80vh;
+  background: url("../img/cake-1.jpeg") center/cover fixed no-repeat;
+  border-radius: 0.3rem;
+}
+.lightbox-close {
+  color: var(--mainBlack);
+  font-size: 3rem;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.lightbox-close:hover {
+  color: var(--mainLightBlue);
+}
+
+.lightbox-control {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--mainBlack);
+  transition: all 1s linear;
+  cursor: pointer;
+}
+.lightbox-control:hover {
+  color: var(--mainLightBlue);
+}
+.btnLeft {
+  top: 50%;
+  left: 0;
+  transform: translateX(-60%);
+}
+.btnRight {
+  top: 50%;
+  right: 0;
+  transform: translateX(60%);
+}
